@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './app.less';
 import {Route, BrowserRouter, Link, Switch} from "react-router-dom";
 import Home from "./component/home/Home";
+import Calculator from './component/calculator/Calculator';
+import Timer from './component/timer/Timer'
 
 class App extends Component {
   render() {
