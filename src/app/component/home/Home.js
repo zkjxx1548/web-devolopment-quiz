@@ -3,7 +3,7 @@ import './home.less';
 
 const Home = () => {
   return (<div className="home">
-    <span>在线实用工具</span>
+    <span className="title">在线实用工具</span>
     <div className="tools">
       <div className="tool">
         <img src={require("../../../images/calculator.png")} alt="not internet"/>
