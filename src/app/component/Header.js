@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, NavLink, Route } from 'react-router-dom';
 import Store from '../component/home/Store';
 import './header.css';
+import Order from './order/Order';
 
 class Header extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class Header extends React.Component {
         </ul>
         <Switch>
           <Route exact path="/" component={Store} />
+          <Route path="/order" component={Order} />
 
         </Switch>
       </BrowserRouter>
