@@ -1,0 +1,14 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  margin: 5px;
+  padding: 5px;
+}
+
+.product button {
+  width: 10%;
+  border: 1px solid gray;
+  border-radius: 50%;
+  
+}
