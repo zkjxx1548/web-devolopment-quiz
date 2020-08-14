@@ -1,10 +1,10 @@
 import React from 'react';
-//import './product.css';
+import './order.css';
 
 class SingleOrder extends React.Component {
 
   render() {
-    return <tr>
+    return <tr className="table-tr">
       <td>{this.props.order.name}</td>
       <td>{this.props.order.price}</td>
       <td>{this.props.order.count}</td>

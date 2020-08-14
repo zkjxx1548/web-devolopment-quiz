@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleOrder from './SingleOrder';
-//import './store.css';
+import './order.css';
 
 class Order extends React.Component {
   state = {
@@ -22,7 +22,7 @@ class Order extends React.Component {
 
   render() {
     return <table className="orders">
-      <thead>
+      <thead className="table-tr">
         <td>名字</td>
         <td>单价</td>
         <td>数量</td>
