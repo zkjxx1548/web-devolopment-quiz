@@ -1,28 +1,8 @@
 import React from 'react';
-import AddEntry from './AddEntry';
-//import Product from './Product';
-//import './store.css';
+import './addProduct.css'
 
 class AddProduct extends React.Component {
   state = {
-    entrys: [
-      {
-        chinese: "名称",
-        name: "add-name",
-      },
-      {
-        chinese: "价格",
-        name: "add-price",
-      },
-      {
-        chinese: "单位",
-        name: "add-unit",
-      },
-      {
-        chinese: "图片",
-        name: "add-img_url",
-      }
-    ],
     name: "名称",
     price: "价格",
     unit: "单位",
@@ -30,23 +10,26 @@ class AddProduct extends React.Component {
   }
   render() {
     return <form className="addProduct">
-      <label htmlFor="name">
+      <h1>添加商品</h1>
+      <label htmlFor="name" className="form-lable">
         <h3>{this.state.name}</h3>
-        <input id="name" value={this.state.name} type="text"/>
+        <input id="name" className="form-input" value={this.state.name} type="text"/>
       </label>
-      <label htmlFor="price">
+      <label htmlFor="price" className="form-lable">
         <h3>{this.state.price}</h3>
-        <input id="price" value={this.state.price} type="text"/>
+        <input id="price" className="form-input" value={this.state.price} type="text"/>
       </label>
-      <label htmlFor="unit">
+      <label htmlFor="unit" className="form-lable">
         <h3>{this.state.unit}</h3>
-        <input id="unit" value={this.state.unit} type="text"/>
+        <input id="unit" className="form-input" value={this.state.unit} type="text"/>
       </label>
-      <label htmlFor="img_url">
+      <label htmlFor="img_url" className="form-lable">
         <h3>{this.state.img_url}</h3>
-        <input id="img_url" value={this.state.img_url} type="text"/>
+        <input id="img_url" className="form-input" value={this.state.img_url} type="text"/>
       </label>
-      <button t>提交</button>
+      <div className="btn-sumbit">
+        <button>提交</button>
+      </div>
     </form>
   }
 }

@@ -1,0 +1,25 @@
+.form-lable h3 {
+  text-align: left;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(209, 201, 201);
+  border-radius: 5px;
+  color: rgba(209, 201, 201, 0.7);
+  font-size: 15px;
+}
+
+.btn-sumbit {
+  text-align: left;
+}
+
+.addProduct button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: white;
+  background-color: blue;
+  border: 0;
+  border-radius: 5px;
+}
