@@ -4,44 +4,34 @@ import './store.css';
 
 class Store extends React.Component {
   state = {
-    products: [
-      {
-        img_url: "../../../images/1.png",
-        name: "可乐1",
-        price: 1
-      },
-      {
-        img_url: "../../../images/1.png",
-        name: "可乐2",
-        price: 1
-      },
-      {
-        img_url: "../../../images/1.png",
-        name: "可乐3",
-        price: 1
-      },
-      {
-        img_url: "../../../images/1.png",
-        name: "可乐4",
-        price: 1
-      },
-      {
-        img_url: "../../../images/1.png",
-        name: "可乐5",
-        price: 1
-      },
-      {
-        img_url: "../../../images/1.png",
-        name: "可乐6",
-        price: 1
-      }
-    ]
+    productss: []
   }
 
   render() {
     return <div className="products">
-      {this.state.products.map(product => <Product product={product} />)} 
+      {this.state.productss.map(product => <Product product={product} />)} 
     </div>
+  }
+
+  componentDidMount = () => {
+    const URL = 'http://localhost:8080/product';
+    const options = {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+      
+      }
+    }
+    fetch(URL, options)
+      .then(response => response.json())
+      .then(result => {
+        this.setState({
+          productss: result
+        })
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
 }
 export default Store; 

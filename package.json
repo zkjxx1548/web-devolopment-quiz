@@ -7,6 +7,9 @@
     "start": "parcel index.html"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "http-proxy-middleware": "^1.0.5",
+    "koa": "^2.13.0",
     "react": ">=15",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1"

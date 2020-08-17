@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './app.less';
 import Header from './component/Header';
-import fetchData from './myFetch.js';
+
 
 class App extends Component {
   state = {
@@ -11,19 +11,10 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Header />
+        <Header products={this.state.products}/>
       </div>
     );
   }
-
-  // componentDidMount = () => {
-  //   fetchData().then((res) => {
-  //     this.setState({
-  //       products: res
-  //     });
-  //   });
-  // }
-
 }
 
 export default App;

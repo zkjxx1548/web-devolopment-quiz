@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, NavLink, Route } from 'react-router-dom';
-import Store from '../component/home/Store';
+import Store from './home/Store';
 import './header.css';
 import Order from './order/Order';
 import AddProduct from './add/AddProduct';
@@ -11,7 +11,7 @@ class Header extends React.Component {
       <BrowserRouter>
         <ul className="nav">
           <li>
-            <NavLink to="/">商城</NavLink>
+            <NavLink to="/product">商城</NavLink>
           </li>
           <li>
             <NavLink to="/order">订单</NavLink>
@@ -21,7 +21,7 @@ class Header extends React.Component {
           </li>
         </ul>
         <Switch>
-          <Route exact path="/" component={Store} />
+          <Route path="/product" component={Store} />
           <Route path="/order" component={Order} />
           <Route path="/add" component={AddProduct} />
 
